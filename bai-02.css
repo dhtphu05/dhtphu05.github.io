@@ -1,0 +1,148 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+.container{
+    max-width: 1280px;
+    width: 100%;
+    margin-inline: 24px;
+}
+.logo-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+}
+.header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+}
+.header img{
+    width: 500px;
+    height: 500px;
+}
+.header-content p{
+    font-size: 24px;
+    font-weight: 400;
+    color: gray;
+    margin-bottom: 100px;
+}
+.header-content h1{
+    font-size: 50px;
+    font-weight: 700;
+    color: black;
+}
+.header-content-metrics {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.header-content-metric {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 0;
+    flex:auto;
+}
+.content-metric-value { 
+    font-size: 24px;   
+    font-weight: 700;
+    color: pink;
+}
+.content-metric-title {
+    font-size: 16px;
+    font-weight: 400;
+    color: gray;
+}
+.about{
+    padding: 24px 0;
+    margin:20px ;
+}
+.section-title{
+    display: inline-block;
+    font-size:20px;
+    font-weight: 600;
+    border-bottom: 2px solid pink;
+    padding-bottom: 12px;
+}
+button{
+    padding: 12px 24px;
+    border-color: pink pink pink pink;
+    border-bottom-color: pink;
+    color:pink;
+    background-color: white;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    display: block;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+}
+.skills{
+    display: flex;
+    padding: 24px 0;
+    justify-content: space-between;
+}
+.section-skill{
+    display: inline-block;
+    padding: 24px;
+    width: 50%;
+}
+.skills-list-item{
+    display: inline-block;
+    justify-content: space-between;
+    padding: 12px ;
+    border: 2px solid gray;
+    border-radius: 14px;
+    font-size: 16px;    
+    margin: 12px;
+}
+.experience{
+    padding: 24px 0;
+    justify-content: space-between;
+}
+.experience h2{
+    display: inline-block;
+}
+.job{
+    display: block;
+}
+.job-item{
+    display: inline-block;
+    padding: 24px;
+    box-sizing: border-box;
+    width: 48%;
+}
+.job-item .job-date{
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+    margin-bottom: 20px;
+}
+.job-item .job-company{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.job-item .job-position{
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+    margin-bottom: 20px;
+}
+.job-decription{
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.job-decription ul{
+    list-style-type: disc;
+    padding-left: 50px;
+}
