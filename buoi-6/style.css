@@ -1,0 +1,22 @@
+.parent{
+    display: flex;
+    background-color: white;
+    border: 2px solid black;
+    width: 400px;
+    height: 500px;
+}
+.child{
+    height: 1%;
+    width: 100%;
+    background-color: red;
+    border: 1px solid black;
+    display: flex;
+    align-self: flex-end;
+
+}
+.parent:hover > .child{
+    background-color: green;
+    height: 100%;
+    transition: all ease 0.5s;
+
+}

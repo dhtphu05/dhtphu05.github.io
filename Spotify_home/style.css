@@ -94,6 +94,7 @@ body{
 .main-content{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 .left-side{
     width: 250px;
