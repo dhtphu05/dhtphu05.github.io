@@ -39,5 +39,7 @@ result.addEventListener(
         colorCodeResult.innerHTML='';
         widthOfResult.innerHTML='';
         heightOfResult.innerHTML='';
+        result.style.width='100px';
+        result.style.height='100px';
     }
 )
