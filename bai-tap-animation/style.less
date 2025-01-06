@@ -11,8 +11,10 @@ strong{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    max-width: 400px;
+    max-width: 900;
+    margin: 0 auto;
     margin-bottom: 30px;
+    padding-bottom: 30px;
     .img-1 {
         position: relative;
         width: 500px; 
@@ -147,7 +149,7 @@ strong{
             }
     
             &:hover img {
-                transform: translateY(-20px)
+                transform: translateY(-30px)
 
             }
         }
@@ -347,25 +349,25 @@ strong{
             }
     
             &:hover img {
-                transform: translate(10px);
+                scale:0.9;
 
             }
         }
     
         .title {
             position: absolute;
-            top: 20%; 
-            left: 10%;
+            top: 25%; 
+            left: 40%;
             font-size: 25px;
             // font-weight: bold;
             color: white;
-            transition: top 0.3s ease; 
+            transition: all 0.3s ease; 
         }
     
         .content {
             position: absolute;
-            top: 124px; 
-            left: 130px;
+            top: 65px; 
+            left: 150px;
             font-size: 15px;
             color: red;
             transition: all 0.3s ease; 
@@ -378,11 +380,11 @@ strong{
     
     
         .img-container:hover + .title {
-            top: 70%; 
+            transform: translateY(-20px);
         }
         .img-container:hover ~ .content {
             opacity: 1;
-            transform: translateY(20px);
+            // transform: translateY(10px);
 
         }
     }
