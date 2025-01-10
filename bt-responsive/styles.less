@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    display: grid;
+    grid-template-columns:  3.125% 3.125% 6.25% 12.5% 25% 50%;
+    grid-template-rows: 50% 25% 12.5% 6.25% 6.25% ;
+    background-color: #7e667a;
+    font-size: 30px;
+    color:rgb(0, 0, 0);
+
+    // padding: 10px;
+    .speakers{
+        display: grid;
+        grid-column: 1/span 5;
+        grid-row: 1;
+        background-color: #cfcbcf;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .schedule{
+        grid-column: 6;
+        grid-row: 1/span 5;
+        background-color: #d8c999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .sponsors{
+        grid-column: 1/span 4;
+        grid-row: 2/span 1;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+
+        background-color: #2a8f9f;
+    }
+    .ticket{
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+        grid-column: 5;
+        grid-row: 2/span 4;
+        background-color: #9ddfa6;
+    }
+    .home{
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+        grid-column: 1/span 3;
+        grid-row: 3;
+        background-color: #be8a8a;
+    }
+    .venue{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        grid-column: 4;
+        grid-row: 3/ span 3;
+        background-color: #7878b3;
+    }
+    .close{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        grid-column: 1/span 2;
+        grid-row: 4;
+        background-color: #3fee3f;
+    }
+    .right-close{
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        grid-column: 3;
+        grid-row: 4/span 2;
+        background-color: #9dc79d;
+    }
+    .under-close-1{
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        grid-column: 1;
+        grid-row: 5;
+        background-color: #c79d9d;
+    }
+    .under-close-2{align-items: center;
+        
+        display: flex;
+        justify-content: center;
+        grid-column: 2;
+        grid-row: 5;
+        background-color: #2b2bcc;
+    }
+    transition: all 0.5s ease;
+    @media screen and (max-width: 1024px) {
+        
+        transition: all 0.5s ease;
+        grid-template-columns:  3.125% 3.125% 6.25% 12.5% 25% 50%;
+        grid-template-rows: 30% 51% 10.5% 4.25% 4.25% ;
+        .sponsors{
+            
+            grid-column:4/span 2;
+            grid-row: 3/span 3;
+        }
+        .ticket{
+            grid-column: 1/span 4;
+            grid-row: 2;
+        }
+        .venue{
+            grid-column: 5;
+            grid-row: 2;
+        }
+        .close{
+            grid-column: 1/span 3;
+            grid-row: 4/span 2;
+        }
+        .right-close,.under-close-1,.under-close-2{
+            display:none;
+        }
+
+
+        
+        
+    }
+    
+}
