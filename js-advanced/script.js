@@ -13,7 +13,6 @@ function fetchPromise(URL){
             .catch(
                 function (error){
                     console.log(error);
-                    app.innerHTML=("Some thing went wrong");    
                     }            
             )
 
