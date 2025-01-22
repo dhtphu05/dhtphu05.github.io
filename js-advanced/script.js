@@ -37,13 +37,9 @@ fetchPromise(`https://pokeapi.co/api/v2/pokemon/?offset=0&limit=898`)
         
     }
 )
-
-function displayPokemon(data,isAll){
-    const renderLimit=offset+limit;
-    
-    
-    for(;offset<renderLimit;offset++)
-    {   
+async function displayPokemon(data, isAll) {
+    const renderLimit = offset + limit;
+    for (; offset < renderLimit; offset++) {
         const card = document.createElement('div');
         card.classList.add('card');
         const idPokemon = offset + 1;
@@ -52,6 +48,46 @@ function displayPokemon(data,isAll){
             <img class="img-pokemon" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${idPokemon}.png">
             <h2 class="name-pokemon">${data[offset].name}</h2>
         `;
+        let typeOfPokemon = [];
+        try {
+            const value = await fetchPromise(`https://pokeapi.co/api/v2/pokemon/${idPokemon}`);
+            value.types.forEach(t => typeOfPokemon.push(t.type.name));
+            const typeContainer = document.createElement('div');
+            typeContainer.classList.add('type-container');
+            typeOfPokemon.forEach(type => {
+                const typeCard = document.createElement('div');
+                typeCard.classList.add('type-pokemon');
+                typeCard.style.backgroundColor = typeColors[type];
+                typeCard.innerText = type;
+                typeContainer.appendChild(typeCard);
+            });
+            card.appendChild(typeContainer);
+        } catch (err) {
+            console.log(err);
+        }
+        document.querySelector('.container-pokemon').appendChild(card);
+    }
+    offset += limit;
+}
+
+const loadMoreButton=document.querySelector('#load-more');
+loadMoreButton.addEventListener(
+    'click',
+    () => displayPokemon(data)
+);
+function render(data){
+    document.querySelector('.container-pokemon').innerHTML=' ';
+    data.forEach((pokemon, index) => {
+        const card = document.createElement('div');
+        card.classList.add('card');
+        let idPokemon= pokemon.url.slice(34,-1);
+        console.log(idPokemon);
+        card.innerHTML = `
+            <p class="id-pokemon">#${idPokemon }</p>
+            <img class="img-pokemon" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${idPokemon }.png">
+            <h2 class="name-pokemon">${pokemon.name}</h2>
+        `;
+        
         let typeOfPokemon=[];
         fetchPromise(`https://pokeapi.co/api/v2/pokemon/${idPokemon}`)
         .then(
@@ -75,52 +111,6 @@ function displayPokemon(data,isAll){
                 card.appendChild(typeContainer);
             }
         )
-        // card.appendChild(typeContainer);
-        document.querySelector('.container-pokemon').appendChild(card);
-    }
-    offset+=limit;
-}
-
-const loadMoreButton=document.querySelector('#load-more');
-loadMoreButton.addEventListener(
-    'click',
-    () => displayPokemon(data)
-);
-function render(data){
-    document.querySelector('.container-pokemon').innerHTML=' ';
-    data.forEach((pokemon, index) => {
-        const card = document.createElement('div');
-        card.classList.add('card');
-        let idPokemon= pokemon.url.slice(34,-1);
-        console.log(idPokemon);
-        card.innerHTML = `
-            <p class="id-pokemon">#${idPokemon }</p>
-            <img class="img-pokemon" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${idPokemon }.png">
-            <h2 class="name-pokemon">${pokemon.name}</h2>
-        `;
-        // let typeOfPokemon=[];
-        // fetchPromise(`https://pokeapi.co/api/v2/pokemon/${idPokemon}`)
-        // .then(
-        //     function (value){
-        //         value.types.forEach(
-        //             function (type){
-        //                 typeOfPokemon.push(type.type.name);
-        //             }
-        //         )
-        //         card.innerHTML+=`<p class="type-pokemon">${typeOfPokemon.join(', ')}</p>`;
-        // )
-        let typeOfPokemon=[];
-        fetchPromise(`https://pokeapi.co/api/v2/pokemon/${idPokemon}`)
-        .then(
-            function (value){
-                value.types.forEach(
-                    function (type){
-                        typeOfPokemon.push(type.type.name);
-                    }
-                )
-                card.innerHTML+=`<p class="type-pokemon">${typeOfPokemon.join(', ')}</p>`;
-            }
-        )        
         document.querySelector('.container-pokemon').appendChild(card);
     });
 }
@@ -144,20 +134,18 @@ searchInput.addEventListener('input',function(){
     )
     document.querySelector('.container-pokemon').innerHTML=' ';
     render(filteredData);
+    if(searchInput.value===''){
+        document.querySelector('.container-pokemon').innerHTML=' ';
+        offset=0;
+        displayPokemon(data,false);
+        
+        loadMoreButton.style.display='block';
+    }
+    
+    
+    
 })
 
 
 
 
-
-
-
-
-
-//dùng promise.all để gọi 5 6 cái promise cùng 1 lúc
-// Promise.all( pokemonsType)
-// .then(
-//     function (value){
-//         console.log(value);
-//     }
-// )
