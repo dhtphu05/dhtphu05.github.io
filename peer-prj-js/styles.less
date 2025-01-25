@@ -1,0 +1,354 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header{
+    display: flex;
+    background-color: black;
+    font-size: 15px;
+    justify-content: space-between;
+    color:white;
+    .logo{
+        flex-direction: row;
+        display: flex;
+        padding: 20px;
+        p{
+            color: white;
+            font-size: 20px;
+            width: 30px;
+            height: 30px;
+            background-color: aqua;
+            font-weight: bold;
+        }
+        .name-logo{
+            font-size: 20px;
+            margin-left: 10px;
+        }
+    }
+    .mid-select{
+        button{
+            background-color: rgb(8, 33, 53);
+            color: rgb(255, 255, 255);
+            margin: 20px;
+            width: 100px;
+            height: 30px;
+            border-radius: 15px;
+            font-weight: bold;
+            &:hover{
+                background-color: rgb(255, 255, 255);
+                color: rgb(5, 30, 50);
+            }
+        }
+        
+        
+        
+    }
+    .search-bar{
+        width: 500px;
+        display: flex;
+        input{
+            position: absolute;
+            width: 400px;
+            height: 30px;
+            border-radius: 15px;
+            border: none;
+            padding: 5px;
+            margin: 20px;
+            font-weight: bold;
+            font-style: italic;
+        }
+        .container-button{
+            position: relative;
+            margin: 20px;
+            left: 270px;
+            display: flex;
+            justify-content: center;
+            padding-top:5px ;
+            i{  
+                position: none;
+                color: black;
+                font-weight: bold;
+                align-items: center;
+                width: 30px;
+            }
+
+            button{
+                
+                background-color: rgb(139, 170, 196);
+                color: rgb(105, 52, 49);
+                width: 50px;
+                height: 30px;
+                border-radius: 15px;
+                font-weight: bold;
+                &:hover{
+                    background-color: rgb(105, 52, 49);
+                    color: rgb(139, 170, 196);
+                }
+            }
+        }
+    }
+}
+.home-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    img{
+        width: 100%;
+        height: 100%;
+        // position: absolute;
+    }
+    .intro-content{
+        position: absolute;
+        top: 200px;
+        display: flex;
+        // justify-content: center;
+        left: 150px;
+        // align-items: center;
+        
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.5);
+        .title{
+            font-size: 50px;
+            font-weight: bold;
+            color: white;
+            margin: 10px;
+        }
+        .description{
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            margin: 20px;
+            width: 500px;
+        }
+        
+    }
+    .about{
+        position: absolute;
+        top:10px;
+        display: flex;
+        // justify-content: center;
+        left: 150px;
+        // align-items: center;
+        
+        flex-direction: column;
+        // background-color: rgba(255, 255, 255, 0.5);  
+        .title{
+            position: absolute;
+            top:10px;
+            font-size: 50px;
+            font-weight: bold;
+            color: white;
+            margin: 10px;
+            min-width: 500px;
+        }
+        .description{
+            position: absolute;
+            top: 60px;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            margin: 20px;
+            width: 1000px;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+        .our-team{
+            position: absolute;
+            top: 400px;
+            // left: 220px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            .title-team{
+                font-size: 50px;
+                font-weight: bold;
+                color: white;
+                // margin: 10px;
+                width: 200px;
+            }
+            .container-card{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                margin: 0px;
+                padding: 0px;
+                transform: translateY(-10px);
+                gap: 40px;
+                
+                .card{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: rgba(29, 44, 82, 0.5);
+                    // margin: 10px;
+                    padding: 10px;
+
+                    
+                    border-radius: 10px;
+                    width: 400px;
+                    height: 150px;
+                    .name{
+                        font-size: 20px;
+                        font-weight: bold;
+                        color: white ;
+                        margin:20px;
+                    }
+                    .description-team{
+                        font-size: 15px;
+                        font-weight: bold;
+                        color: white;
+                    }
+                    .role{
+                        background-color: rgb(116, 197, 197);
+                        color: white;
+                        font-size: 20px;
+                        font-weight: 800;
+                        padding:5px;
+                        border-radius: 15px;
+
+                    }
+                }
+            }
+            
+        }
+
+    }
+    .contact-us{
+        position: absolute;
+        top:10px;
+        display: flex;
+        // justify-content: center;
+        left: 150px;
+        // align-items: center;
+        
+        flex-direction: column;
+        // background-color: rgba(255, 255, 255, 0.5);  
+        .title{
+            position: absolute;
+            top:150px;
+            font-size: 50px;
+            font-weight: bold;
+            color: white;
+            margin: 10px;
+            min-width: 500px;
+        }
+        .form{
+            position: absolute;
+            top: 60px;
+            left: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(41, 46, 80, 0.5);
+            width: 500px;
+            height: 500px;
+            .input-group{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin: 20px;
+                input{
+                    width: 300px;
+                    height: 30px;
+                    border-radius: 15px;
+                    border: none;
+                    padding: 5px;
+                    margin: 20px;
+                    font-weight: bold;
+                    font-style: italic;
+                    // color: rgb(229, 221, 221);
+                    background-color: rgb(153, 156, 158);
+                    opacity: 0.5;
+                }
+                textarea{
+                    width: 300px;
+                    height: 100px;
+                    border-radius: 15px;
+                    border: none;
+                    padding: 5px;
+                    margin: 20px;
+                    font-weight: bold;
+                    font-style: italic;
+                    background-color: rgb(153, 156, 158);
+                    opacity: 0.5;
+                }
+                label{
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: white;
+                    
+                    transform: translateX(-100px);
+                }
+            }
+            button{
+                background-color: rgb(19, 33, 44);
+                color: rgb(225, 225, 225);
+                width: 100px;
+                height: 30px;
+                border-radius: 15px;
+                font-weight: bold;
+                transform: translateX(60px);
+                &:hover{
+                    background-color: rgb(255, 255, 255);
+                    color: rgb(35, 57, 75);
+                }
+            }
+            
+        }
+    }
+    .container-result{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 200px;
+        left: 1000px;
+        width: 500px;
+        height: 100px;
+        .card-des{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(29, 44, 82, 0.5);
+            border-radius: 15px;
+            img{
+                position: relative;
+                width: 100%;
+                height: 200px;
+                border-radius: 15px;
+
+            }
+            .content{
+                font-size: 20px;
+                font-weight: bold;
+                color: white;
+                // margin: 20px;
+                .title{
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: white;
+                    margin: 10px;
+                }
+                .description{
+                    font-size: 15px;
+                    font-weight: bold;
+                    color: rgb(176, 170, 170);
+                    margin: 20px;
+                    width: 500px;
+                }
+            }
+        }
+
+    }
+
+
+}
