@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'nunito', sans-serif;
+}
+
+
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    
+    .logo{
+        margin: 0 16px 0 0;
+        padding: 5px 0 5px 0;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color:#E52F37;
+    }
+    .right-header{
+        display: flex;
+        align-items: center;
+        .list-items{
+            display: flex;
+            list-style: none;
+            padding-left: 100px;
+            
+            li{
+                // margin-top:30px;
+                margin:auto;
+                // margin-left: 20px;
+                padding-left: 20px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                color: #071E55;
+                font-size: 17px;
+                font-weight: 600;
+                &:hover{
+                    color: #E52F37;
+                }
+
+            }
+            .get-started {
+                // display: flex;
+                // justify-content: center;
+                // align-items: center;
+                // background-color: #E52F37;
+                // color: white;
+                // border-radius: 23px;
+                // margin: 0 15px 0 10px;
+                // border: 1px solid #E52F37;
+                // padding: 12px 18px;
+                // transition: all 0.3s ease;
+                
+                // &:hover {
+                //     background-color: white;
+                //     color: #E52F37;
+                // }
+
+                button {
+                    padding: 12px 18px;
+                    border-radius: 23px;
+                    margin: 0 15px 0 10px;
+                    background-color: #E52F37;
+                    transition: all 0.3s ease;
+                    color: white;
+                    border: none;
+                    border-radius: 23px;
+                    cursor: pointer;
+                    font-weight: 700;
+                    transition: all 0.3s ease;
+                    font-size: 17px;
+                    box-sizing: border-box;
+                    border: 1px solid;
+                    &:hover {
+                        background-color: white;
+                        color: #E52F37;
+                        border-color:1px solid #E52F37;
+                        
+                        
+                    }
+                }
+            }
+            
+        }   
+    }
+}
