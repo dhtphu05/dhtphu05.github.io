@@ -13,20 +13,28 @@
 <body>
     <div class="container">
         <!-- start header -->
-        <div class="header">
+        <div class="header" >
             <div class="logo">
                 <div class="logo-name">LaunchPage</div>
             </div>
             <div class="right-header">
                 <div class="list-page">
                     <ul class="list-items">
-                        <li class="header-item">Home</li>
-                        <li class="header-item">About</li>
-                        <li class="header-item">Testimonials</li>
-                        <li class="header-item">Work</li>
-                        <li class="header-item">Teams</li>
-                        <li class="header-item">Feature</li>
-                        <li class="header-item">Pricing</li>
+                        <li class="header-item">
+                            <a href="#home">Home</a></li>
+                        <li class="header-item">
+                            <a href="#about">About</a></li>
+                        <li class="header-item">
+                            <a href="#testimonials">Testimonials</a></li>
+                        <li class="header-item">
+                            <a href="#work">Work</a></li>
+                        <li class="header-item">
+                            <a href="#teams">Teams</a></li>
+                        <li class="header-item">
+                            <a href="#features">Feature
+                            </a></li>
+                        <li class="header-item">
+                            <a href="#pricing">Pricing</a></li>
                         <li class="get-started">
                             <button class="get-start-button">Get Started</button>
                         </li>
@@ -36,7 +44,7 @@
         </div>
         <!-- end header -->
         <!-- start form-free-trial -->
-        <div class="form-free-trial">
+        <div class="form-free-trial" id="home">
             <div class="background-image">
                 <img src="./asset/home.jpg" alt="">
             </div>
@@ -114,7 +122,7 @@
             </div>
         </div>
         <!-- end section as a featured  -->
-        <div class="what-we-do">
+        <div class="what-we-do" id="about">
             <div class="container-content">
                 <div class="container-title">
                     <div class="title">What We Do</div>
@@ -187,6 +195,7 @@
                         </ul>
                         
                     </div>
+                    <button><a href="#home">Discover More</a></button>
                 </div>
             </div>
         </div>
@@ -271,7 +280,7 @@
         </div>
         <!-- end fun facts  -->
         <!-- start what people  -->
-        <div class="what-people">
+        <div class="what-people" id="testimonials">
             <div class="what-container">
                 <div class="content-left">
                     <div class="title">What People Are Saying.</div>
@@ -287,6 +296,7 @@
                                 <i class="material-icons">star_half</i>
                             </div>
                         </div>
+                        
                         <div class="person-rate">
                             <div class="name">Fifoo</div>
                             <div class="list-star">
@@ -334,7 +344,7 @@
         </div>
         <!-- end what people  -->
         <!-- start portfolio -->
-        <div class="portfolio">
+        <div class="portfolio" id="work">
             <div class="container-portfolio">
                 <div class="title">Our Portfolio</div>
                 <div class="content">Discover the lastet projects accomplished for my clients</div>
@@ -380,7 +390,7 @@
         </div>
         <!-- end portfolio  -->
         <!-- start meet-our-team  -->
-        <div class="meet-our-team">
+        <div class="meet-our-team" id="teams">
             <div class="meet-team-container">
                 <div class="title">Meet Our Team</div>
                 <div class="content">Discover more about our high performing team.</div>
@@ -444,7 +454,7 @@
         </div>
         <!-- end award-winning  -->
         <!-- start amazing features  -->
-        <div class="amazing-features">
+        <div class="amazing-features" id="features">
             <div class="amazing-container">
                 <div class="title">Amazing Features</div>
                 <div class="content">Lorem ipsum dolor sit amet amet amet amte tme.</div>
@@ -508,7 +518,7 @@
         </div>
         <!-- end amazing features  -->
         <!-- start pricing  -->
-        <div class="pricing">
+        <div class="pricing" id="pricing">
             <div class="pricing-container">
                 <div class="content-left">
                     <div class="title">Great Pricing Plans tailored to your needs.</div>
@@ -606,6 +616,28 @@
             </div>
         </div>
         <!-- end contact us  -->
+        <!-- start footer -->
+        <div class="footer">
+            <div class="container-footer">
+                <div class="left-content">
+                    © 2020 <span class="template-name">LaunchPage</span>. Designed by <a href="https://themeforest.net/user/epic-themes/portfolio?ref=Epic-Themes" target="_blank">Epic-Themes</a>
+                </div>
+                <div class="right-content">
+                    <ul>
+                        <li>Follow us</li>
+                        <li>
+                            <i class="fa-brands fa-twitter"></i>
+                        </li>
+                        <li>
+                            <i class="fa-brands fa-pinterest"></i>
+                        </li>
+                        <li><i class="fa-brands fa-square-facebook"></i></li>
+                        <li><i class="fa-brands fa-instagram"></i></li>
+                        <li><i class="fa-brands fa-skype"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
         
         
 
@@ -637,8 +669,10 @@
 
     </div>
     
-
     <script src="./index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/less" ></script>
+    <script src="https://kit.fontawesome.com/246fa7789c.js" crossorigin="anonymous"></script>
+
+
 </body>
 </html> 
