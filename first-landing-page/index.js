@@ -60,3 +60,33 @@ getThirdReview.addEventListener('click',
         getThirdReviewContent.style.display='flex';
     }
 )
+
+// css button get started
+const getStartedButton=document.querySelector('.get-start-button');
+getStartedButton.addEventListener('click',()=>{
+    window.location.href="#contact";
+})
+const getStartedButtonInPricing=document.querySelectorAll('#button-pricing');
+getStartedButtonInPricing.forEach((button)=>{
+    button.addEventListener('click',()=>{
+        window.location.href="#home";
+    })
+})
+
+//css amazing feature
+document.addEventListener("DOMContentLoaded", function () {
+    const tags = document.querySelectorAll(".tag");
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.classList.add("show");
+                }, index * 200); 
+            }
+        });
+    }, { threshold: 0.2 });
+
+    tags.forEach(tag => observer.observe(tag));
+});
+
