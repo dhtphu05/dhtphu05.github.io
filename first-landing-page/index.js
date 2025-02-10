@@ -90,3 +90,9 @@ document.addEventListener("DOMContentLoaded", function () {
     tags.forEach(tag => observer.observe(tag));
 });
 
+// css responsive header
+const getToggle=document.querySelector('.toggle');
+const getListNav=document.querySelector('.list-items');
+getToggle.addEventListener('click',()=>{
+    getListNav.style.display=getListNav.style.display==='flex'?'none':'flex';
+})

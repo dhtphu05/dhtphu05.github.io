@@ -27,7 +27,7 @@ html, body {
     align-items: center;
     padding: 10px 10%;
     flex-wrap: wrap;
-    position: fixed; 
+    position: fixed;
     top: 0; 
     left: 0; 
     right: 0; 
@@ -37,32 +37,74 @@ html, body {
     
     @media screen and (max-width: 768px) {
         padding: 10px 5%;
-        
     }
-    
-    .logo{
-        margin: 0 16px 0 0;
-        padding: 5px 0 5px 0;
-        font-size: 28px;
-        font-weight: 700;
-        color:#E52F37;
+    .responsive-wrap{
+        display: flex;
+        justify-content: space-between;
+        gap:50px;
         @media screen and (max-width: 768px) {
-            font-size: 24px;
+            width: 100%;
+            
+        }
+        .logo{
+            margin: 0 16px 0 0;
+            padding: 5px 0 5px 0;
+            font-size: 28px;
+            font-weight: 700;
+            color:#E52F37;
+            @media screen and (max-width: 768px) {
+                font-size: 24px;
+                
+            }
+        }
+        .toggle{
+            display: none;
+            width: 60%;
+            transition: all 0.3s ease;
+            i{
+                display: none;
+                font-size: 30px;
+                width: 100%;
+                color: #E52F37;
+                // background-color: #E52F37;
+                cursor: pointer;
+                @media screen and (max-width: 768px) {
+                    display: flex;
+                    font-size: 30px;
+                    color: #E52F37;
+                    cursor: pointer;
+                    align-items: center;
+                    justify-content: flex-end;
+                    
+                }
+            }
+            @media screen and (max-width: 768px) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                
+            }
             
         }
     }
+    
     .right-header{
         display: flex;
         align-items: center;
-        @media screen and (max-width: 768px) {
-            display: none;
-            
-        }
+        
         .list-items{
             display: flex;
             list-style: none;
             padding-left: 100px;
             flex-wrap: wrap;
+            transition: all 0.3s ease;
+            @media screen and (max-width: 768px) {
+                display: none;
+                flex-direction: column;
+                padding-left: 0;
+                align-items: start;
+            }
             
             
             li{
