@@ -140,9 +140,6 @@ searchInput.addEventListener('input',function(){
         
         loadMoreButton.style.display='block';
     }
-    
-    
-    
 })
 
 
