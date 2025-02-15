@@ -13,7 +13,7 @@ const typeColors = {
 const pokemonListDisplay = ref([]);
 const searchQuery = ref('');
 const offset = ref(0);
-const limit = ref(20);
+const limit = ref(10);
 
 
 async function getPokemonDetails(id){
@@ -78,9 +78,17 @@ async function initializePokemon() {
 
 initializePokemon();
 
+// const detailsPokemonShow=ref([]);
+// function showPokemonDetails(pokemon){
+//   detailsPokemonShow.value=pokemon;
+//   const popUp = document.querySelector('.pop-up');
+//   popUp.style.display = 'block';
+//   popUp.addEventListener('click', () => {
+//     popUp.style.display = 'none';
+//   });
 
 
-
+import pokemonCard from './components/pokemonCard.vue';
 </script>
 
 <template>
@@ -89,25 +97,26 @@ initializePokemon();
       <input type="text" v-model="searchQuery" id="search-input" placeholder="Search Pokemon">
     </div>
     <div class="container-pokemon">
-      <div v-for="pokemon in filteredPokemon" :key="pokemon.id" class="card">
-        <div class="id">{{'#' + pokemon.id}}</div>
-        <img :src="pokemon.image" :alt="pokemon.name">
-        <h3>{{ pokemon.name }}</h3>
-        <div class="type-container">
-          <span v-for="type in pokemon.types" :key="type" 
-                class="type-pokemon"
-                :style="{ backgroundColor: typeColors[type] }">
-            {{ type }}
-          </span>
-        </div>
-      </div>
+      <pokemonCard 
+        v-for="pokemon in filteredPokemon" 
+        :key="pokemon.id" 
+        :pokemon="pokemon" 
+        :type-colors="typeColors"
+      />
     </div>
     <div class="load-more">
-      <button @click="displayPokemon" id="load-more">Load more</button>
-
+      <button v-show="!searchQuery && offset < pokemonListDisplay.length" @click="displayPokemon" id="load-more">Load more</button>
     </div>
+    <!-- <div class="pop-up" >
+      <div class="pop-up-content" >
+        <h2>{{pokemon.name}}</h2>
+        <img :src="pokemon.image" :alt="pokemon.name">
+        <p>{{pokemon.details}}</p>
+      </div>
+    </div> -->
   </div>
 </template>
+
 
 <style scoped>
 *{
@@ -124,7 +133,7 @@ initializePokemon();
     width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    gap:10px;
+    gap:40px;
     
 }
 #load-more{
@@ -136,35 +145,7 @@ initializePokemon();
     border-radius: 10px;
     
 }
-.card {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        border-radius: 10px;
-        padding: 10px;
-        background-color: #FFFFFF;
-        border-radius: 15px;
-        box-shadow: rgb(72, 71, 71) 0px 0px 5px;
-        width: 200px;
-        height: 300px;
 
-    }
-    .card img{
-        width: 100px;
-        height: 100px;
-    }
-    .card h3{
-        font-size: 20px;
-        font-weight: bold;
-    }
-    .card p{
-        font-size: 15px;
-    }
-.card:hover{
-    transform: scale(1.1);
-    transition: transform 0.5s;
-} 
     
 .type-container{
     display: flex;
