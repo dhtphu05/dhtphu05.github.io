@@ -20,7 +20,7 @@ function fetchPromise(URL){
     )
 }
 let offset=0;
-const limit=10;
+const limit=36;
 
 let data=[];
 // let pokemonType=[];
