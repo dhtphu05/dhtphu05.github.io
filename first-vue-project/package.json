@@ -8,7 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --fix",
-    "deploy": "npm run build && git add dist -f && git commit -m 'deploy' && git push origin gh-pages --force"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "vue": "^3.5.13"
